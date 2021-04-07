@@ -60,7 +60,7 @@ public class PalindromeNumber{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean isPalindrome(int x) {
-        return  false;
+        return false;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
