@@ -90,7 +90,6 @@ public class PerfectSquares {
         private List<Integer> generateSquares(int n) {
             List<Integer> squares = new ArrayList<>();
             int square = 1;
-
             int diff = 3;
             while (square <= n) {
                 squares.add(square);
