@@ -34,6 +34,7 @@ package editor.cn;
 // 
 //输入：haystack = "", needle = ""
 //输出：0
+//
 // 
 //
 // 
@@ -51,6 +52,7 @@ public class ImplementStrstr {
     public static void main(String[] args) {
 
         Solution solution = new ImplementStrstr().new Solution();
+        System.out.println(solution.strStr("ass", "s"));
 
 
     }
@@ -73,7 +75,23 @@ public class ImplementStrstr {
             }
             return -1;*/
 
-            int n = ss.length(), m = pp.length();
+
+
+            int n =ss.length(),m=pp.length();
+            char[] s = ss.toCharArray(), p = pp.toCharArray();
+            for (int i = 0; i < m - n; i++) {
+                int a = i,b=0;
+                while(b<m && s[a] == p[b]){
+                    a++;
+                    b++;
+                }
+                if (b==m) return i;
+            }
+            return -1;
+
+            //消波块
+
+            /*int n = ss.length(), m = pp.length();
             char[] s = ss.toCharArray(), p = pp.toCharArray();
 
             for (int i = 0; i < n - m; i++) {
@@ -84,7 +102,7 @@ public class ImplementStrstr {
                 }
                 if (b == m) return i;
             }
-            return -1;
+            return -1;*/
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
