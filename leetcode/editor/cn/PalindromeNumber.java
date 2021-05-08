@@ -50,19 +50,52 @@ package editor.cn;
 // Related Topics 数学 
 // 👍 1452 👎 0
 
-public class PalindromeNumber{
+public class PalindromeNumber {
     public static void main(String[] args) {
-    
-        Solution solution = new PalindromeNumber().new Solution();
-        
-}
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public boolean isPalindrome(int x) {
-        return  false;
+        Solution solution = new PalindromeNumber().new Solution();
+
     }
-}
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public boolean isPalindrome(int x) {
+
+
+            if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+
+            int pre = 0;
+            while (x > pre) {
+                pre = pre * 10 + x % 10;
+                x = x/10;
+            }
+            return x==pre || x==(pre/10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*   String reversedStr = (new StringBuilder(x + "")).reverse().toString();
+        return (x + "").equals(reversedStr);*/
+
+       /* if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+        int revertedNumber = 0;
+        while (x > revertedNumber) {
+            revertedNumber = revertedNumber * 10 + x % 10;
+            x /= 10;
+        }
+        return x == revertedNumber || x == revertedNumber / 10;*/
+        }
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
