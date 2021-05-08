@@ -38,7 +38,7 @@ package editor.cn;
 
 public class BestTimeToBuyAndSellStock{
     public static void main(String[] args) {
-    
+
         Solution solution = new BestTimeToBuyAndSellStock().new Solution();
         int [] price = new int[]{7,1,5,3,6,4};
         System.out.println(solution.maxProfit(price));
