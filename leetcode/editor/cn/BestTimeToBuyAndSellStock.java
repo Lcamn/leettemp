@@ -58,6 +58,7 @@ class Solution {
             else max = Math.max(max, prices[i] - soFarMin);
         }
         return max;
+
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
